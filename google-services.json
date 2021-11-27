@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "765756561886",
+    "firebase_url": "https://appli-comptes-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "appli-comptes",
+    "storage_bucket": "appli-comptes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765756561886:android:38e183b78e16de1389254f",
+        "android_client_info": {
+          "package_name": "mes.Comptes.first"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765756561886-g4sllnknfahthojkbs1dbfn6fqrorjkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2_hvmG6SJ9QXDuTtTUlkgXK0hmlyMfuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765756561886-g4sllnknfahthojkbs1dbfn6fqrorjkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
