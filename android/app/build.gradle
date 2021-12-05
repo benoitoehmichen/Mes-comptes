@@ -189,6 +189,16 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
+  implementation "com.google.firebase:firebase-auth:17.0.0"
+    implementation project(':react-native-firebase')
+    implementation "com.google.android.gms:play-services-base:16.1.0"
+    implementation "com.google.firebase:firebase-core:16.0.9"
+
+    implementation "com.google.firebase:firebase-storage:15.0.2"
+    implementation "com.google.firebase:firebase-auth"
+    implementation project(':react-native-gesture-handler')
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
     def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true";

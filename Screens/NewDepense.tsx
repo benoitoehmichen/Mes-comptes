@@ -7,6 +7,7 @@ import {Dropdown, MultiSelect} from 'react-native-element-dropdown';
 import SelectDropdown from 'react-native-select-dropdown';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { OneDepense } from '../types';
 
 export default function NewDepenseScreen() {
 
@@ -21,6 +22,7 @@ export default function NewDepenseScreen() {
   const [selectedAmount, setSelectedAmount] = useState<number>();
   const [selectedCategory, setSelectedCategory] = useState<string>();
   const [selectedPaymentWay, setSelectedPaymentWay] = useState<string>();
+  const [oneDepense, setOneDepense] = useState<OneDepense>();
 
   const [toBeConfirmed, setToBeConfirmed] = useState<boolean>(false);
   const [isAmazon, setIsAmazon] = useState<boolean>(false);
@@ -35,6 +37,7 @@ export default function NewDepenseScreen() {
   const categorys = ['Nourriture', 'Vétement', 'Moto', 'Cadeau', 'Ciné/théâtre', 'Transport en commun', 'Voyages', 'Don', 'Essence', 'Abonnement (musique, VoD)', 'santé', 'coiffeur', 'EDF', 'Cardiweb', 'Charges Boulogne', 'vacances', 'travaux', 'Pour Boulogne', 'Apparei Numérique', 'Impot', 'livre', 'sortie', 'Prêt' ]
   const PaymentWay = ['CB SG39', 'Liquide', 'Virement', 'Chèque', 'Lydia']
 
+
   const onDateChange = (event: Event, selectedDate: Date) => {
       setSelectedDate(selectedDate)
       setShowDatePicker(false)
@@ -45,7 +48,7 @@ console.log('date = ', today.getDay)
       <ScrollView>
     <View style={styles.container}>
       <TouchableOpacity style={{borderBottomWidth: 1, width: 200, height: 25}} onPress={() => setShowDatePicker(true)}><Text style={styles.dateText}>{format(selectedDate, 'dd/MM/yyyy')}</Text></TouchableOpacity>
-      {showDatePicker && <DateTimePicker value={today} onChange={onDateChange}></DateTimePicker>}
+      {showDatePicker && <DateTimePicker value={today} onChange={() => onDateChange}></DateTimePicker>}
       
       <TextInput style={styles.inputText} placeholder={'Nom'}></TextInput>
       <TextInput style={styles.inputText} placeholder={'Montant'} keyboardType={'phone-pad'}></TextInput>
@@ -96,6 +99,7 @@ console.log('date = ', today.getDay)
 function ListDepense() {
     <View style={{flex: 1, backgroundColor: 'red'}}></View>
 }
+
 
 
 //---------------------------------------------------------------------------------
